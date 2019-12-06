@@ -97,6 +97,7 @@ setup_system() {
 create_workspace() {
 	msg "Cloning aports and applying PR$PR"
 	git clone --depth=1 --branch "$BRANCH" "$REPOURL" "$APORTSDIR"
+	msg "Attempting to wget "$REPOURL"/pull/"$PR".patch"
 	wget -qO- "$REPOURL"/pull/"$PR".patch | git -C "$APORTSDIR" am --3way
 }
 
