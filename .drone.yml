@@ -14,7 +14,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: edge-x86
       dockerfile: dockerfiles/edge/x86/Dockerfile
 
@@ -34,7 +34,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: v3.9-x86
       dockerfile: dockerfiles/v3.9/x86/Dockerfile
 
@@ -54,7 +54,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: edge-x86_64
       dockerfile: dockerfiles/edge/x86_64/Dockerfile
 
@@ -74,7 +74,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: v3.9-x86_64
       dockerfile: dockerfiles/v3.9/x86_64/Dockerfile
 
@@ -94,7 +94,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: edge-aarch64
       dockerfile: dockerfiles/edge/aarch64/Dockerfile
 
@@ -114,7 +114,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: v3.9-aarch64
       dockerfile: dockerfiles/v3.9/aarch64/Dockerfile
 
@@ -134,7 +134,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: edge-armhf
       dockerfile: dockerfiles/edge/armhf/Dockerfile
 
@@ -154,7 +154,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: v3.9-armhf
       dockerfile: dockerfiles/v3.9/armhf/Dockerfile
 
@@ -174,7 +174,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: edge-armv7
       dockerfile: dockerfiles/edge/armv7/Dockerfile
 
@@ -194,7 +194,7 @@ steps:
         from_secret: docker_user
       password:
         from_secret: docker_pass
-      repo: alpinelinux/alpine-drone-ci
+      repo: phoenixmage/alpine-drone-ci
       tags: v3.9-armv7
       dockerfile: dockerfiles/v3.9/armv7/Dockerfile
 
