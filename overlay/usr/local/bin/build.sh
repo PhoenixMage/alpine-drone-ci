@@ -7,7 +7,7 @@ readonly REPODEST=$HOME/packages
 readonly REPOS="main community testing non-free"
 readonly MIRROR=http://dl-cdn.alpinelinux.org/alpine
 #readonly REPOURL=https://github.com/alpinelinux/aports
-readonly REPOURL=$DRONE_GIT_HTTP_URL
+readonly REPOURL=$DRONE_REPO_LINK
 readonly ARCH=$(apk --print-arch)
 # Drone variables
 readonly BRANCH=$DRONE_COMMIT_BRANCH
