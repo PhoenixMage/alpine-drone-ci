@@ -93,6 +93,7 @@ setup_system() {
 		abuild-keygen -ain
 	else
 		echo Using pre-generated keys
+		echo $PKG_SIGN_KEY
 		echo -e "${PKG_SIGN_KEY//$/\\n}" > ~/.abuild/drone.rsa
 		echo PACKAGER_PRIVKEY=\"/home/buildozer/.abuild/drone.rsa\" > ~/.abuild/abuild.conf
 	fi
