@@ -92,6 +92,7 @@ setup_system() {
 	if [ -z "${PKG_SIGN_PUB+x}" -o -z "${PKG_SIGN_KEY+x}" ]; then
 		abuild-keygen -ain
 	else
+		whoami
 		mkdir /home/buildozer/.abuild
 		echo $PKG_SIGN_KEY > /home/buildozer/.abuild/drone.rsa
 		echo $PKG_SIGN_PUB > /home/buildozer/.abuild/drone.rsa.pub
