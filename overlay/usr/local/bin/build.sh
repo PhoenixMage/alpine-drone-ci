@@ -89,7 +89,7 @@ changed_aports() {
 setup_system() {
 	sudo sh -c "echo $MIRROR/$(get_release)/main > /etc/apk/repositories"
 	sudo apk -U upgrade -a || apk fix || die "Failed to up/downgrade system"
-	if [ -z "${PKG_SIGN_PUB+x}" -o -z "${PKG_SIGN_KEY+x}" ]; then
+	if [ -z "${PKG_SIGN_KEY+x}" ]; then
 		abuild-keygen -ain
 	else
 		echo -e "${PKG_SIGN_KEY//$/\\n}" > ~/.abuild/drone.rsa
