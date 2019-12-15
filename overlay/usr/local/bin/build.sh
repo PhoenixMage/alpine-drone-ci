@@ -93,7 +93,7 @@ setup_system() {
 		abuild-keygen -ain
 	else
 		whoami
-		echo -e "${PKG_SIGN_KEY//\$/\\n}" > /home/buildozer/.abuild/drone.rsa
+		echo -e "${PKG_SIGN_KEY//$/\\n}" > /home/buildozer/.abuild/drone.rsa
 		echo -e "${PKG_SIGN_PUB//\$/\\n}" > /home/buildozer/.abuild/drone.rsa.pub
 		#sudo echo $PKG_SIGN_PUB > /etc/apk/keys/drone.rsa
 		echo PACKAGER_PRIVKEY=\"/home/buildozer/.abuild/drone.rsa.pub\" > ~/.abuild/abuild.conf
