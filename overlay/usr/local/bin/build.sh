@@ -97,8 +97,8 @@ setup_system() {
 		echo $PKG_SIGN_PUB > /home/buildozer/.abuild/drone.rsa.pub
 		#sudo echo $PKG_SIGN_PUB > /etc/apk/keys/drone.rsa
 		echo PACKAGER_PRIVKEY=\"/home/buildozer/.abuild/drone.rsa.pub\" > ~/.abuild/abuild.conf
-		cat /home/buildozer/.abuild/drone.rsa.pub
-		cat /home/buildozer/.abuild/drone.rsa
+		cat -A /home/buildozer/.abuild/drone.rsa.pub
+		cat -A /home/buildozer/.abuild/drone.rsa
 	fi
 	sudo sed -i 's/JOBS=[0-9]*/JOBS=$(nproc)/' /etc/abuild.conf
 	mkdir -p "$REPODEST"
