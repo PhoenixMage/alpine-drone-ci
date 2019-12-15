@@ -124,6 +124,8 @@ sysinfo || true
 setup_system || die "Failed to setup system"
 create_workspace || die "Failed to create workspace"
 
+echo Test varaible is: $TEST_VAR
+
 for repo in $(changed_repos); do
 	set_repositories_for "$repo"
 	for pkgname in $(changed_aports "$repo"); do
