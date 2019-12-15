@@ -93,7 +93,7 @@ setup_system() {
 		abuild-keygen -ain
 	else
 		echo -e "${PKG_SIGN_KEY//$/\\n}" > ~/.abuild/drone.rsa
-		echo PACKAGER_PRIVKEY=\"~/.abuild/drone.rsa\" > ~/.abuild/abuild.conf
+		echo PACKAGER_PRIVKEY=\"/home/buildozer/.abuild/drone.rsa\" > ~/.abuild/abuild.conf
 	fi
 	sudo sed -i 's/JOBS=[0-9]*/JOBS=$(nproc)/' /etc/abuild.conf
 	mkdir -p "$REPODEST"
