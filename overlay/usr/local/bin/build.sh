@@ -92,9 +92,10 @@ setup_system() {
 	if [ -z "${PKG_SIGN_PUB+x}" -o -z "${PKG_SIGN_KEY+x}" ]; then
 		abuild-keygen -ain
 	else
-		echo $PKG_SIGN_KEY > ~/.abuild/drone.rsa
-		echo $PKG_SIGN_PUB > ~/.abuild/drone.rsa.pub
-		echo $PKG_SIGN_PUB > /etc/apk/keys/drone.rsa
+		mkdir /home/buildozer/.abuild
+		echo $PKG_SIGN_KEY > /home/buildozer/.abuild/drone.rsa
+		echo $PKG_SIGN_PUB > /home/buildozer/.abuild/drone.rsa.pub
+		sudo echo $PKG_SIGN_PUB > /etc/apk/keys/drone.rsa
 		echo PACKAGER_PRIVKEY=\"~/.abuild/drone.rsa.pub\" > ~/.abuild/abuild.conf
 	fi
 	sudo sed -i 's/JOBS=[0-9]*/JOBS=$(nproc)/' /etc/abuild.conf
