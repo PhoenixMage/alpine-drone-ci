@@ -101,6 +101,7 @@ setup_system() {
 		cat -A /home/buildozer/.abuild/drone.rsa
 		cat /home/buildozer/.abuild/drone.rsa.pub
 		cat /home/buildozer/.abuild/drone.rsa
+		openssl rsa -in /home/buildozer/.abuild/drone.rsa -check
 	fi
 	sudo sed -i 's/JOBS=[0-9]*/JOBS=$(nproc)/' /etc/abuild.conf
 	mkdir -p "$REPODEST"
