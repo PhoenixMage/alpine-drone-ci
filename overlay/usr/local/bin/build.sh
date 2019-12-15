@@ -96,11 +96,7 @@ setup_system() {
 		echo -e "${PKG_SIGN_KEY//$/\\n}" > /home/buildozer/.abuild/drone.rsa
 		echo -e "${PKG_SIGN_PUB//\$/\\n}" > /home/buildozer/.abuild/drone.rsa.pub
 		#sudo echo $PKG_SIGN_PUB > /etc/apk/keys/drone.rsa
-		echo PACKAGER_PRIVKEY=\"/home/buildozer/.abuild/drone.rsa.pub\" > ~/.abuild/abuild.conf
-		cat -A /home/buildozer/.abuild/drone.rsa.pub
-		cat -A /home/buildozer/.abuild/drone.rsa
-		cat /home/buildozer/.abuild/drone.rsa.pub
-		cat /home/buildozer/.abuild/drone.rsa
+		echo PACKAGER_PRIVKEY=\"/home/buildozer/.abuild/drone.rsa\" > ~/.abuild/abuild.conf
 		openssl rsa -in /home/buildozer/.abuild/drone.rsa -check
 	fi
 	sudo sed -i 's/JOBS=[0-9]*/JOBS=$(nproc)/' /etc/abuild.conf
