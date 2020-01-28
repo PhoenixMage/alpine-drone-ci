@@ -20,7 +20,7 @@ steps:
 
 ---
 kind: pipeline
-name: v3.9-x86
+name: v3.11-x86
 
 platform:
   os: linux
@@ -35,8 +35,8 @@ steps:
       password:
         from_secret: docker_pass
       repo: phoenixmage/alpine-drone-ci
-      tags: v3.9-x86
-      dockerfile: dockerfiles/v3.9/x86/Dockerfile
+      tags: v3.11-x86
+      dockerfile: dockerfiles/v3.11/x86/Dockerfile
 
 ---
 kind: pipeline
@@ -60,7 +60,7 @@ steps:
 
 ---
 kind: pipeline
-name: v3.9-x86_64
+name: v3.11-x86_64
 
 platform:
   os: linux
@@ -75,8 +75,8 @@ steps:
       password:
         from_secret: docker_pass
       repo: phoenixmage/alpine-drone-ci
-      tags: v3.9-x86_64
-      dockerfile: dockerfiles/v3.9/x86_64/Dockerfile
+      tags: v3.11-x86_64
+      dockerfile: dockerfiles/v3.11/x86_64/Dockerfile
 
 ---
 kind: pipeline
@@ -100,7 +100,7 @@ steps:
 
 ---
 kind: pipeline
-name: v3.9-aarch64
+name: v3.11-aarch64
 
 platform:
   os: linux
@@ -115,8 +115,8 @@ steps:
       password:
         from_secret: docker_pass
       repo: phoenixmage/alpine-drone-ci
-      tags: v3.9-aarch64
-      dockerfile: dockerfiles/v3.9/aarch64/Dockerfile
+      tags: v3.11-aarch64
+      dockerfile: dockerfiles/v3.11/aarch64/Dockerfile
 
 ---
 kind: pipeline
@@ -140,7 +140,7 @@ steps:
 
 ---
 kind: pipeline
-name: v3.9-armhf
+name: v3.11-armhf
 
 platform:
   os: linux
@@ -155,8 +155,8 @@ steps:
       password:
         from_secret: docker_pass
       repo: phoenixmage/alpine-drone-ci
-      tags: v3.9-armhf
-      dockerfile: dockerfiles/v3.9/armhf/Dockerfile
+      tags: v3.11-armhf
+      dockerfile: dockerfiles/v3.11/armhf/Dockerfile
 
 ---
 kind: pipeline
@@ -180,7 +180,7 @@ steps:
 
 ---
 kind: pipeline
-name: v3.9-armv7
+name: v3.11-armv7
 
 platform:
   os: linux
@@ -195,6 +195,6 @@ steps:
       password:
         from_secret: docker_pass
       repo: phoenixmage/alpine-drone-ci
-      tags: v3.9-armv7
-      dockerfile: dockerfiles/v3.9/armv7/Dockerfile
+      tags: v3.11-armv7
+      dockerfile: dockerfiles/v3.11/armv7/Dockerfile
 
